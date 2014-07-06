@@ -2,7 +2,10 @@ package com.kahveciefendi.utility;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.kahveciefendi.base.IBeverage;
+import com.kahveciefendi.base.KahveciEfendi;
 import com.kahveciefendi.base.KeyValuePair;
 
 /**
@@ -13,6 +16,8 @@ import com.kahveciefendi.base.KeyValuePair;
  */
 public class ConsoleOutputUtility {
 
+	private static final Logger logger = Logger.getLogger(ConsoleOutputUtility.class);
+	
 	/**
 	 * Constants for branching options
 	 */
@@ -94,7 +99,7 @@ public class ConsoleOutputUtility {
 		System.out.println("Lutfen ekstranizi seciniz");
 		System.out.println(ConsoleOutputUtility.COMPLETE_CURRENT_AND_GOTO_BEVERAGE_MENU + "-Onaylayip ana menuye donun\t ");
 		System.out.println(ConsoleOutputUtility.CANCEL_CURRENT_AND_GOTO_BEVERAGE_MENU + "-Iptal edip ana menuye donun");
-		System.out.println(ConsoleOutputUtility.QUIT + "-Siparis sisteminden cikin");
+		System.out.println(ConsoleOutputUtility.QUIT + "-Siparis sisteminden cikin\n");
 	}
 
 	public static void printNoConfirmedOrderMessage() {
@@ -119,15 +124,21 @@ public class ConsoleOutputUtility {
 	public static void printTotalOrder(List<IBeverage> orderList) {
 		if (orderList.isEmpty()) {
 			System.out.println("Hicbir icecek siparisi vermediniz!\n\nIyi gunler dileriz!");
+			logger.debug("No order to calculate");
 			return;
 		}
+		StringBuilder builder = new StringBuilder();
+		builder.append("Given order is : ");
 		System.out.println("Verdiginiz siparisler:");
 		int totalCost = 0;
 
 		for (IBeverage beverage : orderList) {
+			builder.append("\n").append(beverage.getDescription()).append(" = ").append(beverage.cost());
 			System.out.println(beverage.getDescription() + " = " + beverage.cost());
 			totalCost += beverage.cost();
 		}
+		builder.append("\nTotal cost is = ").append(totalCost);
+		logger.info(builder.toString());
 		System.out.println("Odemeniz gereken toplam tutar = " + totalCost + "TL");
 		System.out.println("\nSiparisiniz icin tesekkur ederiz!");
 	}
