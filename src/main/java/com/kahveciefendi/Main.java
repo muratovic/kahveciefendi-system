@@ -10,7 +10,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		long startTime = System.currentTimeMillis();
-		logger.debug("Application started!");
+		logger.info("Application started!");
 		KahveciEfendi kahveciEfendi = new KahveciEfendi();
 		kahveciEfendi.takeOrder();
 		logger.info("Finished! Took " + (System.currentTimeMillis() - startTime) + "ms");
