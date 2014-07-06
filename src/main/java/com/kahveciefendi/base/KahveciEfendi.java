@@ -30,7 +30,7 @@ public class KahveciEfendi {
 				continue;
 			}
 			logger.info("Given branching option is " + input.toLowerCase());
-			switch (input.toLowerCase()) {
+			switch (input.toLowerCase().charAt(0)) {
 			case ConsoleOutputUtility.QUIT:
 				logger.info("Customer cancelled the program");
 				ConsoleOutputUtility.printOrderCancelledMessage();
@@ -103,7 +103,7 @@ public class KahveciEfendi {
 				beverage = this.prepareCondiment(condimentList, beverage, inputForCondiment);
 				continue;
 			}
-			switch (inputForCondiment.toLowerCase()) {
+			switch (inputForCondiment.toLowerCase().charAt(0)) {
 			case ConsoleOutputUtility.QUIT:
 				logger.info("Customer cancelled the program");
 				ConsoleOutputUtility.printOrderCancelledMessage();

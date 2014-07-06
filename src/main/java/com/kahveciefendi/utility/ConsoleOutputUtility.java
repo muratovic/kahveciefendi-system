@@ -21,13 +21,13 @@ public class ConsoleOutputUtility {
 	/**
 	 * Constants for branching options
 	 */
-	public static final String QUIT = "q";
-	public static final String COMPLETE_ORDER = "f";
-	public static final String CANCEL_LAST_BEVERAGE = "c";
-	public static final String ADD_CONDIMENT_TO_BEVERAGE = "a";
-	public static final String CANCEL_CURRENT_AND_GOTO_BEVERAGE_MENU = "m";
-	public static final String COMPLETE_CURRENT_AND_GOTO_BEVERAGE_MENU = "u";
-	public static final String ADD_CURRENT_BEVERAGE = "b";
+	public static final char QUIT = 'q';
+	public static final char COMPLETE_ORDER = 'f';
+	public static final char CANCEL_LAST_BEVERAGE = 'c';
+	public static final char ADD_CONDIMENT_TO_BEVERAGE = 'a';
+	public static final char CANCEL_CURRENT_AND_GOTO_BEVERAGE_MENU = 'm';
+	public static final char COMPLETE_CURRENT_AND_GOTO_BEVERAGE_MENU = 'u';
+	public static final char ADD_CURRENT_BEVERAGE = 'b';
 
 	private ConsoleOutputUtility() {
 
