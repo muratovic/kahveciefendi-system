@@ -29,83 +29,83 @@ public class ConsoleOutputUtility {
 	}
 
 	public static void printWelcomeMessage() {
-		System.out.println("\t\tKahveci Efendiye Hoş Geldiniz!\n");
+		System.out.println("\t\tKahveci Efendiye Hos Geldiniz!\n");
 	}
 
 	public static void printChooseBeverageMessage() {
-		System.out.println("Lütfen aşağıdaki menüden içecek tercihinizi belirtiniz:\n");
+		System.out.println("Lutfen asagidaki menuden icecek tercihinizi belirtiniz:\n");
 	}
 
 	public static void printChooseCondimentMessage() {
-		System.out.println("Lütfen ekstranızı seçiniz");
+		System.out.println("Lutfen ekstranizi seciniz");
 	}
 
 	public static void printOrderCancelledMessage() {
-		System.out.println("Siparişinizi iptal ettiniz.\n\nİyi günler!");
+		System.out.println("Siparisinizi iptal ettiniz.\n\nIyi gunler!");
 	}
 
 	public static void printOrderCompletedMessage() {
-		System.out.println("Siparişinizi tamamladınız.");
+		System.out.println("Siparisinizi tamamladiniz.");
 	}
 
 	public static void printCurrentBeverageCancelledMessage() {
 		System.out
-				.println("Şu an hazırlamakta olduğunuz siparişinizi iptal ettiniz! Siparişiniz yeni içeçek ile devam edecektir.");
+				.println("Su an hazirlamakta oldugunuz siparisinizi iptal ettiniz! Siparisiniz yeni icecek ile devam edecektir.");
 	}
 
 	public static void printGotoBeverageMenu() {
-		System.out.println("İçeçek menüsüne dönüyorsunuz");
+		System.out.println("Icecek menusune donuyorsunuz");
 	}
 
 	public static void printInvalidInputMessage() {
-		System.out.println("Lütfen geçerli bir giriş yapınız!");
+		System.out.println("Lutfen gecerli bir giris yapiniz!");
 	}
 
 	public static void printNewBeverageMessage() {
-		System.out.println("Yeni içeçek eklemek istediniz.");
+		System.out.println("Yeni icecek eklemek istediniz.");
 	}
 
 	public static void printCancelLastBeverageMessage(IBeverage beverage) {
-		System.out.println("Son siparişiniz olan " + beverage.getDescription() + " iptal edildi!");
+		System.out.println("Son siparisiniz olan " + beverage.getDescription() + " iptal edildi!");
 	}
 	
 	public static void printCancelCurrentBeverageMessage() {
-		System.out.println("Hazırlamakta olduğunuz içeçeğinizi iptal ettiniz!");
+		System.out.println("Hazirlamakta oldugunuz iceceginizi iptal ettiniz!");
 	}
 	
 	public static void printConfirmCurrentBeverageMessage() {
-		System.out.println("Hazırlamakta olduğunuz içeçeğiniz sepetinize eklendi!");
+		System.out.println("Hazirlamakta oldugunuz iceceginiz sepetinize eklendi!");
 	}
 
 	public static void printMainOptions() {
-		System.out.println(ConsoleOutputUtility.COMPLETE_ORDER + "-Siparişinizi tamamlayın");
-		System.out.println(ConsoleOutputUtility.QUIT + "-Sipariş sisteminden çıkın");
+		System.out.println(ConsoleOutputUtility.COMPLETE_ORDER + "-Siparisinizi tamamlayin");
+		System.out.println(ConsoleOutputUtility.QUIT + "-Siparis sisteminden cikin");
 		System.out.println();
 	}
 
 	public static void printOptionWhileHavingBeverage() {
-		System.out.println(ConsoleOutputUtility.ADD_CONDIMENT_TO_BEVERAGE + "-İçeceğinize ekstra ekleyin");
-		System.out.println(ConsoleOutputUtility.ADD_CURRENT_BEVERAGE + "-İçeceğinizi sepete ekleyin");
-		System.out.println(ConsoleOutputUtility.CANCEL_LAST_BEVERAGE + "-Son siparişinizi iptal edin");
+		System.out.println(ConsoleOutputUtility.ADD_CONDIMENT_TO_BEVERAGE + "-Iceceginize ekstra ekleyin");
+		System.out.println(ConsoleOutputUtility.ADD_CURRENT_BEVERAGE + "-Iceceginizi sepete ekleyin");
+		System.out.println(ConsoleOutputUtility.CANCEL_LAST_BEVERAGE + "-Son siparisinizi iptal edin");
 		printMainOptions();
 	}
 
 	public static void printOptionsForCondiment() {
-		System.out.println("Lütfen ekstranızı seçiniz");
-		System.out.println(ConsoleOutputUtility.COMPLETE_CURRENT_AND_GOTO_BEVERAGE_MENU + "-Onaylayıp ana menüye dönün\t ");
-		System.out.println(ConsoleOutputUtility.CANCEL_CURRENT_AND_GOTO_BEVERAGE_MENU + "-İptal edip ana menüye dönün");
-		System.out.println(ConsoleOutputUtility.QUIT + "-Sipariş sisteminden çıkın");
+		System.out.println("Lutfen ekstranizi seciniz");
+		System.out.println(ConsoleOutputUtility.COMPLETE_CURRENT_AND_GOTO_BEVERAGE_MENU + "-Onaylayip ana menuye donun\t ");
+		System.out.println(ConsoleOutputUtility.CANCEL_CURRENT_AND_GOTO_BEVERAGE_MENU + "-Iptal edip ana menuye donun");
+		System.out.println(ConsoleOutputUtility.QUIT + "-Siparis sisteminden cikin");
 	}
 
 	public static void printNoConfirmedOrderMessage() {
-		System.out.println("Onaylanmış siparişiniz bulunmamaktadır.");
+		System.out.println("Onaylanmis siparisiniz bulunmamaktadir.");
 	}
 
 	public static void printCurrentOrders(List<IBeverage> orderList) {
 		if (orderList.isEmpty()) {
 			return;
 		}
-		System.out.print("Sepetinizde bulunan ürünler : ");
+		System.out.print("Sepetinizde bulunan urunler : ");
 		for (IBeverage beverage : orderList) {
 			System.out.print(beverage.getDescription() + " ");
 		}
@@ -113,23 +113,23 @@ public class ConsoleOutputUtility {
 	}
 
 	public static void printCurrentBeverage(IBeverage beverage) {
-		System.out.println("Şu an hazırlamakta olduğunuz siparişiniz: " + beverage.getDescription());
+		System.out.println("Su an hazirlamakta oldugunuz siparisiniz: " + beverage.getDescription());
 	}
 
 	public static void printTotalOrder(List<IBeverage> orderList) {
 		if (orderList.isEmpty()) {
-			System.out.println("Hiçbir içeçek siparişi vermediniz!\n\nİyi günler dileriz!");
+			System.out.println("Hicbir icecek siparisi vermediniz!\n\nIyi gunler dileriz!");
 			return;
 		}
-		System.out.println("Verdiğiniz siparişler:");
+		System.out.println("Verdiginiz siparisler:");
 		int totalCost = 0;
 
 		for (IBeverage beverage : orderList) {
 			System.out.println(beverage.getDescription() + " = " + beverage.cost());
 			totalCost += beverage.cost();
 		}
-		System.out.println("Ödemeniz gereken toplam tutar = " + totalCost + "TL");
-		System.out.println("\nSiparişiniz için teşekkür ederiz!");
+		System.out.println("Odemeniz gereken toplam tutar = " + totalCost + "TL");
+		System.out.println("\nSiparisiniz icin tesekkur ederiz!");
 	}
 	
 	public static void printIntroductionMessage(List<KeyValuePair> beverageList, List<IBeverage> orderList, IBeverage beverage) {
